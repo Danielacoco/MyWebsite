@@ -1,6 +1,20 @@
+
+@import url(https://fonts.googleapis.com/css?family=Indie+Flower|BioRhyme:400,700);
+
 $body-bg:	#1abc9c;
+$font-family-sans-serif: 'BioRhyme', cursive;
 $navbar-inverse-bg: #ecf0f1;
 $brand-success: #f39c12;
 $jumbotron-padding: 20px;
+$jumbotron-bg: #ecf0f1;
+
 
 @import 'bootstrap';
+
+.center{
+	text-align: center;
+}
+
+.navbar-brand {
+	font-weight: bold;
+}
