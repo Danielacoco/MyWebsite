@@ -1,7 +1,8 @@
 class PicsController < ApplicationController
   before_action :set_pic, only: [:show, :edit, :update, :destroy]
-
-
+  before_action :correct_user, only: [:edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show]
+  
   def index
     @pics = Pic.all
   end
@@ -11,7 +12,7 @@ class PicsController < ApplicationController
   end
 
   def new
-    @pic = Pic.new
+    @pic = current_user.pics.build
   end
 
   def edit
@@ -19,7 +20,7 @@ class PicsController < ApplicationController
 
  
   def create
-    @pic = Pic.new(pic_params)
+    @pic = current_user.pics.build(pic_params)
 
     if @pic.save
       redirect_to @pic, notice: 'Pic was successfully created.'
@@ -46,7 +47,12 @@ class PicsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_pic
-      @pic = Pic.find(params[:id])
+      @pic = Pic.find_by(id: params[:id])
+    end
+
+    def correct_user
+      @pic = current_user.pics.find_by(id: params[:id])
+      redirect_to pics_path, notice: "You don't have authorization to perform this action" if @pic.nil?
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
