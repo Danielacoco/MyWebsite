@@ -27,6 +27,7 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'devise', '~> 4.1', '>= 4.1.1'
 
 gem 'paperclip', '~> 5.0.0.beta1'
+gem 'aws-sdk', '~> 2.3'
 
 
 # Use ActiveModel has_secure_password
