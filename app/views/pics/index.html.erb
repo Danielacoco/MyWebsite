@@ -1,15 +1,16 @@
 <div id = "pics" class="transitions-enabled">
 
   <% @pics.each do |pic| %>
-    <div class = 'box panel panel-default'>
-      <%= image_tag pic.image.url(:thumb)%> 
-      <div class='panel-body'>
-        <%= pic.description %>
-        <%= pic.user.try(:email)%>
-        <%= link_to 'Show', pic %>
+    <div class = "box panel panel-default">
+      <%= link_to image_tag(pic.image.url(:thumb)), pic %>
+      <div class="panel-body">
+        <%= pic.description %> <br/>
+        <strong><%= pic.user.try(:email)%></strong>
         <% if pic.user == current_user %>
+          <div class= "actions">
           <%= link_to 'Edit', edit_pic_path(pic) %>
           <%= link_to 'Destroy', pic, method: :delete, data: { confirm: 'Are you sure?' } %>
+          </div>
         <%end%>
       </div>
     </div>
