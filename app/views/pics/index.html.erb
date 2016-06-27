@@ -1,5 +1,7 @@
-<div id = "pics" class="transitions-enabled">
 
+<%= render 'pages/home' unless user_signed_in? %>
+
+<div id = "pics" class="transitions-enabled">
   <% @pics.each do |pic| %>
     <div class = "box panel panel-default">
       <%= link_to image_tag(pic.image.url(:thumb)), pic %>
@@ -7,9 +9,9 @@
         <%= pic.description %> <br/>
         <strong><%= pic.user.try(:email)%></strong>
         <% if pic.user == current_user %>
-          <div class= "actions">
-          <%= link_to 'Edit', edit_pic_path(pic) %>
-          <%= link_to 'Destroy', pic, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <div class= "actions" align = "right">
+          <%= link_to raw('<span class= "glyphicon glyphicon-pencil"></span>'), edit_pic_path(pic) %>
+          <%= link_to raw('<span class= "glyphicon glyphicon-trash"></span>'), pic, method: :delete, data: { confirm: 'Are you sure?' } %>
           </div>
         <%end%>
       </div>

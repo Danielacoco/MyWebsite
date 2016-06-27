@@ -1,15 +1,16 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,700);
 
-@import url(https://fonts.googleapis.com/css?family=Indie+Flower|BioRhyme:400,700);
 
 $body-bg:	#1abc9c;
-$font-family-sans-serif: 'BioRhyme', cursive;
+$font-family-sans-serif:'Roboto Slab', serif;
 $navbar-inverse-bg: #ecf0f1;
 $brand-success: #f39c12;
 $jumbotron-padding: 20px;
 $jumbotron-bg: #ecf0f1;
 
-
+@import 'bootstrap-sprockets';
 @import 'bootstrap';
+@import url('//netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css');
 
 .center{
 	text-align: center;

@@ -18,7 +18,11 @@
         <li><%= link_to 'About Me', about_path %> </li>
 
         <% if user_signed_in? %>
-          <li> <%= link_to 'New Pic', new_pic_path %></li>
+          <li>
+            <%= link_to new_pic_path do %>
+              <span class= "glyphicon glyphicon-plus"></span> New Pic
+            <% end %>
+          </li>
           <li> <%= link_to 'Account Settings', edit_user_registration_path %> </li>
           <li><%= link_to 'Log Out', destroy_user_session_path, method: :delete %> </li>
         <% else %>
