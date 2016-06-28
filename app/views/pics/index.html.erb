@@ -7,7 +7,7 @@
       <%= link_to image_tag(pic.image.url(:thumb)), pic %>
       <div class="panel-body">
         <%= pic.description %> <br/>
-        <strong><%= pic.user.try(:email)%></strong>
+        <strong><%= pic.user.try(:username)%></strong>
         <% if pic.user == current_user %>
           <div class= "actions" align = "right">
           <%= link_to raw('<span class= "glyphicon glyphicon-pencil"></span>'), edit_pic_path(pic) %>

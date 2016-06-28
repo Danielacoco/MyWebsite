@@ -11,7 +11,7 @@
 				<p>
 	  			<%= @pic.description %>
 				</p>
-				<p><strong> <%= @pic.user.email if @pic.user %></strong></p>
+				<p><strong> <%= @pic.user.username if @pic.user %></strong></p>
 
 				<% if current_user == @pic.user %>
 					<%= link_to 'Edit', edit_pic_path(@pic) %>
