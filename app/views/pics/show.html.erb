@@ -13,7 +13,7 @@
 				</p>
 				<p><strong> <%= @pic.user.username if @pic.user %></strong></p>
 
-				<% if current_user == @pic.user %>
+				<% if current_user.try(:admin?) %>
 					<%= link_to 'Edit', edit_pic_path(@pic) %>
 				<% end%>
 			</div>

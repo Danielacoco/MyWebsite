@@ -51,6 +51,9 @@ GEM
     bootstrap-sass (3.3.6)
       autoprefixer-rails (>= 5.2.1)
       sass (>= 3.3.4)
+    bourbon (4.2.7)
+      sass (~> 3.4)
+      thor (~> 0.19)
     builder (3.2.2)
     byebug (9.0.5)
     climate_control (0.0.3)
@@ -193,6 +196,7 @@ PLATFORMS
 DEPENDENCIES
   aws-sdk (~> 2.3)
   bootstrap-sass (~> 3.3.6)
+  bourbon
   byebug
   coffee-rails (~> 4.1.0)
   devise (~> 4.1, >= 4.1.1)
@@ -216,4 +220,4 @@ RUBY VERSION
    ruby 2.3.0p0
 
 BUNDLED WITH
-   1.12.4
+   1.12.5
