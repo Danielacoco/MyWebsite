@@ -7,4 +7,6 @@ class Pic < ActiveRecord::Base
 	validates_attachment :image, content_type: { content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"] }
 	validates :image, presence: true
 	validates :description, presence: true
+
+	has_many :comments, as: :commentable 
 end

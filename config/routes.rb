@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :pics
+  resources :pics do
+    resources :comments, module: :actors
+  end
   devise_for :users
   root "pics#index"
   get "about" => "pages#about" #creates about_path
