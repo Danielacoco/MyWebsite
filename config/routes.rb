@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :pics do
-    resources :comments, module: :actors
+    resources :comments, module: :pics
   end
   devise_for :users
   root "pics#index"
