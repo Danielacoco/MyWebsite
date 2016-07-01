@@ -3,6 +3,6 @@
 <% @pic.comments.each do |comment| %>
 	<div class = "well">
 		<strong><%= User.find((comment.user_id)).username if comment.user_id? %></strong> <br>
-		<%= comment.user_id %>
+		<%= comment.body %>
 	</div>
 <%end%>
