@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   resources :pics do
     resources :comments, module: :pics
   end
+  resources :comments, only: [ :destroy]
   devise_for :users
   root "pics#index"
   get "about" => "pages#about" #creates about_path

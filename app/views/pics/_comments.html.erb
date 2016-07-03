@@ -3,6 +3,9 @@
 <% @pic.comments.each do |comment| %>
 	<div class = "well">
 		<strong><%= User.find((comment.user_id)).username if comment.user_id? %></strong> <br>
-		<%= comment.body %>
+		<%= comment.body %> <br>
+		<div class= "actions" align = "right">
+			<%= link_to raw('<span class= "glyphicon glyphicon-trash"></span>'),polymorphic_path([commentable, comment]), method: :delete if ((comment.user_id == current_user.id if comment.user_id?) || current_user.try(:admin?)) %>
+		</div>
 	</div>
 <%end%>
