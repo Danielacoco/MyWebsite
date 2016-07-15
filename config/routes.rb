@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   end
   resources :comments, only: [ :destroy]
   devise_for :users
-  root "pics#index"
+  root "pages#home"
   get "about" => "pages#about" #creates about_path
   get "projects" => "pages#projects"
 

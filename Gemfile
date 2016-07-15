@@ -35,6 +35,8 @@ gem 'will_paginate-bootstrap'
 
 gem 'sendgrid-ruby'
 
+gem 'font-awesome-sass'
+
 
 
 # Use ActiveModel has_secure_password
