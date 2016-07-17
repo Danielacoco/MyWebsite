@@ -15,7 +15,7 @@
  *= require 'masonry/transitions'
  */
 body {
-	background-image: url('background.jpg');
+	background: url('background.jpg');
 	background-repeat: no-repeat;
 	background-size:  cover;
 }
