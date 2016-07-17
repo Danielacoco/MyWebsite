@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,700);
 
 
-$body-bg:	#1abc9c;
+
 $font-family-sans-serif:'Roboto Slab', serif;
 $navbar-inverse-bg: #ecf0f1;
 $brand-success: #f39c12;
@@ -21,4 +21,24 @@ $jumbotron-bg: #ecf0f1;
 
 .navbar-brand {
 	font-weight: bold;
+	color: #009999;
 }
+
+.navbar-inverse .navbar-brand {
+  font-weight: bold;
+	color: #00688B;
+}
+
+
+.navbar-inverse .navbar-nav > li > a {
+	color: #00688B;
+}
+
+.navbar-inverse .navbar-nav .glyphicon{
+	color: #00688B;
+}
+.navbar-inverse .navbar-nav .glyphicon:hover{
+	color: #ffffff;
+}
+
+

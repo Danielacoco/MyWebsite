@@ -1,25 +1,28 @@
-<div class="jumbotron center">
-	<h1>Food, Code & Sugar Skulls </h1>
-	<p>
-		Find me at 
-		<%= link_to "https://github.com/Danielacoco", class:"btn btn-success btn-lg btn-github" do %>
-			<span class="fa fa-github"></span>
+<div id='homepage' >
+
+	<div class="jumbotron center">
+		<h1>Food, Code & Sugar Skulls </h1>
+		<p>
+			Find me at 
+			<%= link_to "https://github.com/Danielacoco", class:"btn btn-success btn-lg btn-github" do %>
+				<span class="fa fa-github"></span>
+			<% end %>
+			<%= link_to "https://ca.linkedin.com/in/daniela-correa-orozco-437a94106", class:"btn btn-success btn-lg btn-linkedin" do%>
+				<span class="fa fa-linkedin"></span>
+			<% end %>
+			<%= link_to	"https://www.instagram.com/danicorrea6/", class:"btn btn-success btn-lg btn-instagram" do %>
+				<span class="fa fa-instagram"></span>
+	  	<% end %>
+			<%= link_to "https://twitter.com/Danicorrea6", class:"btn btn-success btn-lg btn-twitter" do %>
+	     <span class="fa fa-twitter"></span>
+	  	<% end %>
+	  </a>
+			</p>
+		<% if user_signed_in? %>
+			Welcome to my personal website </br> Enjoy your stay!!
+		<% else %>
+			<p> Comment or contact me by signing up! <%=link_to "Sign Up", new_user_registration_path, class:"btn btn-danger" %>
+			</p>
 		<% end %>
-		<%= link_to "https://ca.linkedin.com/in/daniela-correa-orozco-437a94106", class:"btn btn-success btn-lg btn-linkedin" do%>
-			<span class="fa fa-linkedin"></span>
-		<% end %>
-		<%= link_to	"https://www.instagram.com/danicorrea6/", class:"btn btn-success btn-lg btn-instagram" do %>
-			<span class="fa fa-instagram"></span>
-  	<% end %>
-		<%= link_to "https://twitter.com/Danicorrea6", class:"btn btn-success btn-lg btn-twitter" do %>
-     <span class="fa fa-twitter"></span>
-  	<% end %>
-  </a>
-		</p>
-	<% if user_signed_in? %>
-		Welcome to my personal website </br> Enjoy your stay!!
-	<% else %>
-		<p> Comment or contact me by signing up! <%=link_to "Sign Up", new_user_registration_path, class:"btn btn-danger" %>
-		</p>
-	<% end %>
-</div class="jumbotron"> 
+	</div class="jumbotron"> 
+</div>
