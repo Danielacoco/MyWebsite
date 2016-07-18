@@ -3,7 +3,7 @@
 
 <div id = "pics" class="transitions-enabled">
   <% @pics.each do |pic| %>
-    <div class = "box panel panel-default">
+    <div class = "box panel panel-default panel-transparent">
       <%= link_to image_tag(pic.image.url(:thumb)), pic %>
       <div class="panel-body">
         <%= pic.description %> <br/>
