@@ -40,8 +40,10 @@ class PicsController < ApplicationController
 
 
   def destroy
-    @pic.destroy
-    redirect_to pics_url, notice: 'Pic was successfully destroyed.' 
+    if current_user.try(:admin?)
+      @pic.destroy
+      redirect_to pics_url, notice: 'Pic was successfully destroyed.' 
+    end
   end
 
   private

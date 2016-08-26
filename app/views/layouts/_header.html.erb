@@ -22,7 +22,10 @@
           <span class= "glyphicon glyphicon-cutlery"></span>
         <% end %></li>
         <li><%= link_to projects_path do %>
-         /*projects*/
+          <span class= "glyphicon glyphicon-console"></span>Projects
+        <% end %></li>
+        <li><%= link_to pics_path do %>
+          Random<span class= "glyphicon glyphicon-sunglasses"></span>Posts
         <% end %></li>
 
         <% if user_signed_in? %>
@@ -30,6 +33,9 @@
             <%if current_user.admin? %>
               <%= link_to new_pic_path do %>
                 <span class= "glyphicon glyphicon-plus"></span> New Pic
+              <% end %>
+              <%= link_to new_project_path do %>
+                <span class= "glyphicon glyphicon-plus"></span> New Project
               <% end %>
             <%end%>
           </li>
