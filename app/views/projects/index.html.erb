@@ -1,14 +1,16 @@
-<p id="notice"><%= notice %></p>
 
-<h1>Listing Projects</h1>
 
-<div id = "projects" class="transitions-enabled">
+<div class = "center">
+  <h1>Projects</h1>
+</div>
+
+<div id = "pics" class="transitions-enabled">
   <% @projects.each do |proj| %>
     <div class = "box panel panel-default panel transparent">
       <%= link_to image_tag(proj.image.url(:thumb)), proj %>
       <div class = "panel-body">
         <%=proj.name %> <br/>
-        <%= proj.description %>
+        <%= proj.description %></br>
         <% if current_user.try(:admin?) %>
           <div class= "actions" align = "right">
             <%= link_to raw('<span class= "glyphicon glyphicon-pencil"></span>'),
